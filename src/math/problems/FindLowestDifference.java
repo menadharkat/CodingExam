@@ -11,6 +11,21 @@ public class FindLowestDifference {
         int[] array2 = {18, 25, 41, 47, 17, 36, 14, 19};
 
 
-    }
+        int LowestMin = array1[0];
+        for (int i = 0; i < array2.length; i++) {
+            if (array1[i] < array2[i]) {
 
+
+                if (array1[i] < LowestMin)
+                    LowestMin = array1[i];
+
+
+            } else if (array2[i] <LowestMin) {
+                LowestMin = array2[i];
+
+
+            }
+        }
+        System.out.println(LowestMin);
+    }
 }

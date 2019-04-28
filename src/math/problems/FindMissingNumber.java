@@ -11,5 +11,32 @@ public class FindMissingNumber {
          */
         int[] array = new int[]{10, 2, 1, 4, 5, 3, 7, 8, 6};
 
+
+        int expectedValue = expectation(10);
+        findMissingNum(array,expectedValue);
+    }
+    public static int findMissingNum (int [] array, int expectedValue) {
+        int missingNum;
+        int m = 0;
+        for (int n : array) {
+            m += n;
+        }
+        missingNum= expectedValue-m;
+        System.out.println(" Missing number is: " + missingNum);
+        return missingNum;
+    }
+    public static int expectation (int n ){
+        int m= 0;
+        int [] array = new int [n]; // create an array of size
+        for (int i = 0; i <array.length; i++){
+            array[i] = i +1;
+        }
+        for (int s :array ){
+            m +=s;
+        }
+        System.out.println(" array>L is: " + m);
+        return m;
+
+
     }
 }
